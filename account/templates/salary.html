@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Salary {% endblock %}
+
+{% block content %}
+
+<form action="salary" method="post">
+    {% csrf_token  %}
+<div>
+
+
+    <label for ="Salary">Salary:</label>
+    <input type="int" name="salary">
+
+</div>
+    <input type="submit" value="Salary">
+
+</form>
+
+{%  endblock%}
