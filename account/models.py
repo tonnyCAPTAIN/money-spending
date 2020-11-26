@@ -1,7 +1,10 @@
 from django.db import models
+from django.contrib.auth.models import User
 from django import forms
 # Create your models here.
+
 class Civil_servant(models.Model):
+    #user = models.OneToOneField(User, on_delete=models.CASCADE, null =True)
     name= models.CharField(max_length=100)
     salary = models.IntegerField()
     email=models.EmailField(null=True)

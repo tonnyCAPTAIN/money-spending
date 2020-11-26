@@ -82,9 +82,14 @@ WSGI_APPLICATION = 'money.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ACCOUNT',
+        'USER': 'root',
+        'PASSWORD': 'CAPtain1!',
+        'HOST': 'localhost',
+        'PORT': '3306',
         'OPTIONS': {
-            'read_default_file': '/etc/mysql/my.cnf',
-        },
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
     }
 }
 
